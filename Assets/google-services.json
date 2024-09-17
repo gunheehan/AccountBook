@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "945509069547",
+    "project_id": "accountbank-cc37e",
+    "storage_bucket": "accountbank-cc37e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945509069547:android:32ebf4e99439e3da53c4ae",
+        "android_client_info": {
+          "package_name": "com.redhorse.AccountBank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcqUNuthnA9r94Id5rem-dGTEoNe5dclY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
