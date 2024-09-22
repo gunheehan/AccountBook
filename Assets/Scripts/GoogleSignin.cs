@@ -1,74 +1,92 @@
-using System;
-using System.IO;
-using System.Threading;
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Sheets.v4;
-using Google.Apis.Drive.v3;
-using Google.Apis.Services;
-using Google.Apis.Util.Store;
+
+using System.Collections;
+using System.Threading.Tasks;
+using Firebase;
+using Firebase.Auth;
+using Firebase.Extensions;
+using Google;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GoogleSignin : MonoBehaviour
+public class GoogleSigninManager : MonoBehaviour
 {
-    [SerializeField] private Button Btn_Login;
-    [SerializeField] private Text processText;
-    
-    static string[] Scopes = { DriveService.Scope.DriveFile, SheetsService.Scope.Spreadsheets };
-    static string ApplicationName = "Google Sheets Integration Example";
+    private string webClientId = "945509069547-dukg9gdkmell4chsbdfsqeccogu8fhqs.apps.googleusercontent.com";
+
+    private GoogleSignInConfiguration configuration;
+
+    private DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
+    private FirebaseAuth auth;
+    private FirebaseUser user;
+
+    public Text userNickname;
+    public Text userEmail;
+    public Button signInButton;
+
+    private void Awake()
+    {
+        configuration = new GoogleSignInConfiguration()
+        {
+            WebClientId = webClientId,
+            RequestIdToken = true
+        };
+    }
 
     private void Start()
     {
-        Btn_Login.onClick.AddListener(OnClickSignIn);
+        signInButton.onClick.AddListener(OnClickGoogleSignIn);
     }
 
-    private void OnClickSignIn()
+    private void OnClickGoogleSignIn()
     {
-        AuthenticateSheets();
+        auth = FirebaseAuth.DefaultInstance;
+        
+        GoogleSignIn.Configuration = configuration;
+        GoogleSignIn.Configuration.UseGameSignIn = false;
+        GoogleSignIn.Configuration.RequestIdToken = true;
+        GoogleSignIn.Configuration.RequestEmail = true;
+
+        GoogleSignIn.DefaultInstance.SignIn().ContinueWith(OnGoogleAuthenticatedFinished);
     }
 
-    public DriveService AuthenticateDrive()
+    private void OnGoogleAuthenticatedFinished(Task<GoogleSignInUser> task)
     {
-        processText.text = "Start Auth";
-        UserCredential credential;
-#if UNITY_ANDROID
-        string filePath = Path.Combine(Application.streamingAssetsPath, "google-service.json");
-        using (var www = new WWW(filePath)) {
-            while (!www.isDone) {}
-            filePath = Path.Combine(Application.persistentDataPath, "google-service.json");
-            File.WriteAllBytes(filePath, www.bytes);
-        }
-        #else
-                string filePath = Path.Combine(Application.streamingAssetsPath, "google-service.json");
-#endif
-
-        using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-        { 
-            string credPath = "token.json";
-            credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                GoogleClientSecrets.FromStream(stream).Secrets,
-                Scopes,
-                "user",
-                CancellationToken.None,
-                new FileDataStore(credPath, true)).Result;
-            processText.text = $"{credential.Token} : {credential.UserId}";
-        }
-
-        return new DriveService(new BaseClientService.Initializer()
+        if(task.IsFaulted)
+            Debug.Log("Fault");
+        else if(task.IsCanceled)
+            Debug.Log("Login Cancel");
+        else
         {
-            HttpClientInitializer = credential,
-            ApplicationName = ApplicationName,
-        });
+            Firebase.Auth.Credential credential =
+                Firebase.Auth.GoogleAuthProvider.GetCredential(task.Result.IdToken, null);
+
+            auth.SignInWithCredentialAsync(credential).ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCanceled)
+                {
+                    Debug.LogError("SignInWithCredentialAsync was canceled.");
+                    return;
+                }
+
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("SignInWuthCredentialAsync encountered an error : " + task.Exception);
+                    return;
+                }
+
+                user = auth.CurrentUser;
+
+                userNickname.text = user.DisplayName;
+                userEmail.text = user.Email;
+            });
+        }
     }
 
-    public SheetsService AuthenticateSheets()
+    IEnumerator LoadImage(string imageUri)
     {
-        DriveService driveService = AuthenticateDrive();
+        WWW www = new WWW(imageUri);
+        yield return www;
 
-        return new SheetsService(new BaseClientService.Initializer()
-        {
-            HttpClientInitializer = driveService.HttpClientInitializer,
-            ApplicationName = ApplicationName,
-        });
+        Sprite profile = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height),
+            new Vector2(0, 0));
     }
 }
