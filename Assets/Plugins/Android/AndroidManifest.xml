@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.unity3d.player"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    
+    <application>
+        <activity android:name="com.unity3d.player.UnityPlayerActivity"
+                  android:theme="@style/UnityThemeSelector">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+            <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+        </activity>
+    </application>
+</manifest>
