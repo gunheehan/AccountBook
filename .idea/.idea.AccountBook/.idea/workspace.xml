@@ -4,39 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b810cdcb-e49f-491b-94fd-8d10a89b5deb" name="Changes" comment="Notification 추가 및 SMSReciver 구현중">
+    <list default="true" id="b810cdcb-e49f-491b-94fd-8d10a89b5deb" name="Changes" comment="타임스탬프 기준 메시지 Load 추가중(빌드에러)">
       <change afterPath="$PROJECT_DIR$/Assets/Packages.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsListener.java.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/packages.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/packages.config.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/NotificationsSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testkey.keystore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsReceiver.java.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DataBackup.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DataBackup/AppDisposeStamper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DataBackup/AppDisposeStamper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSReader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AccountBook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AccountBook/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleSignIn/Editor/google-signin-plugin_v1.0.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleSignIn/Editor/google-signin-plugin_v1.0.0.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleSignIn/Editor/google-signin-plugin_v1.0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleSignIn/Editor/google-signin-plugin_v1.0.1.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.89.0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.89.0.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.89.0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.89.0.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.89.0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.89.0.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/play-services-resolver_v1.2.89.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/play-services-resolver_v1.2.89.0.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GoogleLogin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GoogleLogin.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NotificationsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NotificationsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,35 +28,20 @@
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "gunheehan"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gunheehan&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/gunheehan/AccountBook.git",
-    "accountId": "e5564c38-caf5-48e1-9c9f-14b022169ae6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gunheehan/AccountBook.git&quot;,
+    &quot;accountId&quot;: &quot;e5564c38-caf5-48e1-9c9f-14b022169ae6&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/ExternalDependencyManager/Editor/1.2.182/Google.IOSResolver.dll.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/ExternalDependencyManager/Editor/1.2.182/Google.VersionHandlerImpl.dll.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scenes/GoogleLogin.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scenes/GoogleLogin.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/Scripts/GoogleSignin.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/google-services.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9429b40246bf422cb45d93c446be34792aa00/7e/89403fe7/DriveService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eaac17decfc546edb73534c95184017915e00/39/0f8e7703/FirebaseAuth.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -154,7 +120,8 @@
       <option name="presentableId" value="Default" />
       <updated>1726550527284</updated>
       <workItem from="1726550528806" duration="589000" />
-      <workItem from="1727950510069" duration="6149000" />
+      <workItem from="1727950510069" duration="8669000" />
+      <workItem from="1728111814431" duration="1356000" />
     </task>
     <task id="LOCAL-00001" summary="불필요 패키지 삭제">
       <option name="closed" value="true" />
@@ -188,7 +155,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726998466646</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Notification 추가 및 SMSReciver 구현중">
+      <option name="closed" value="true" />
+      <created>1727960459593</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727960459593</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Notification Android, IOS 분리">
+      <option name="closed" value="true" />
+      <created>1727962287248</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727962287248</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +202,8 @@
     <MESSAGE value="파이어베이스 구글 로그인 SDK Import" />
     <MESSAGE value="구글 로그인 완료" />
     <MESSAGE value="Notification 추가 및 SMSReciver 구현중" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notification 추가 및 SMSReciver 구현중" />
+    <MESSAGE value="Notification Android, IOS 분리" />
+    <MESSAGE value="타임스탬프 기준 메시지 Load 추가중(빌드에러)" />
+    <option name="LAST_COMMIT_MESSAGE" value="타임스탬프 기준 메시지 Load 추가중(빌드에러)" />
   </component>
 </project>

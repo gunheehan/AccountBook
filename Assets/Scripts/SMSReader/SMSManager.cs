@@ -1,6 +1,10 @@
 using System;
+#if UNITY_ANDROID
 using Unity.Notifications.Android;
+#endif
+#if UNITY_IOS
 using Unity.Notifications.iOS;
+#endif
 using UnityEngine;
 
 public class SMSManager : MonoBehaviour
@@ -30,6 +34,7 @@ public class SMSManager : MonoBehaviour
 
     private void PushNotificationAndriod(string msg)
     {
+#if UNITY_ANDROID
         try
         {
             var notification = new AndroidNotification();
@@ -47,10 +52,12 @@ public class SMSManager : MonoBehaviour
             Console.WriteLine(e);
             throw;
         }
+        #endif
     }
 
     private void PushNotificationIOS(string msg)
     {
+        #if UNITY_IOS
         try
         {
             var timetrigger = new iOSNotificationTimeIntervalTrigger();
@@ -76,5 +83,6 @@ public class SMSManager : MonoBehaviour
             Console.WriteLine(e);
             throw;
         }
+#endif
     }
 }
