@@ -4,20 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b810cdcb-e49f-491b-94fd-8d10a89b5deb" name="Changes" comment="타임스탬프 기준 메시지 Load 추가중(빌드에러)">
+    <list default="true" id="b810cdcb-e49f-491b-94fd-8d10a89b5deb" name="Changes" comment="빌드수리">
       <change afterPath="$PROJECT_DIR$/Assets/Packages.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsReceiver.java.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DataBackup.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DataBackup/AppDisposeStamper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DataBackup/AppDisposeStamper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSReader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsProcessingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsProcessingService.java.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AccountBook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AccountBook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.182_manifest.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.182_manifest.txt.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GoogleLogin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GoogleLogin.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NotificationsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NotificationsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/SmsReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/SmsReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +43,14 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.182_manifest.txt.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataBackup/AppDisposeStamper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SMSReader/SMSReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/gunhee/Documents/GitHub/AccountBook/Packages/packages-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9429b40246bf422cb45d93c446be34792aa00/7e/89403fe7/DriveService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eaac17decfc546edb73534c95184017915e00/39/0f8e7703/FirebaseAuth.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -122,6 +131,8 @@
       <workItem from="1726550528806" duration="589000" />
       <workItem from="1727950510069" duration="8669000" />
       <workItem from="1728111814431" duration="1356000" />
+      <workItem from="1728207654219" duration="1931000" />
+      <workItem from="1728216750573" duration="3282000" />
     </task>
     <task id="LOCAL-00001" summary="불필요 패키지 삭제">
       <option name="closed" value="true" />
@@ -185,12 +196,35 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -204,6 +238,7 @@
     <MESSAGE value="Notification 추가 및 SMSReciver 구현중" />
     <MESSAGE value="Notification Android, IOS 분리" />
     <MESSAGE value="타임스탬프 기준 메시지 Load 추가중(빌드에러)" />
-    <option name="LAST_COMMIT_MESSAGE" value="타임스탬프 기준 메시지 Load 추가중(빌드에러)" />
+    <MESSAGE value="빌드수리" />
+    <option name="LAST_COMMIT_MESSAGE" value="빌드수리" />
   </component>
 </project>
